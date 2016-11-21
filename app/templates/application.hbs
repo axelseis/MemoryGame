@@ -1,0 +1,19 @@
+
+
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+			<div class="navbar-header">
+				{{#link-to 'index' class="navbar-brand"}}
+					Memory
+				{{/link-to}}
+			</div>
+			<div class="btn-group btn-group-sm number-buttons" role="group" aria-label="">
+				<button type="button" class="btn btn-default btn-4 selected" {{action 'setNumberOfCards' '4'}}>8</button>
+				<button type="button" class="btn btn-default btn-8" {{action 'setNumberOfCards' '8'}}>16</button>
+				<button type="button" class="btn btn-default btn-12" {{action 'setNumberOfCards' '12'}}>24</button>
+				<button type="button" class="btn btn-default btn-16" {{action 'setNumberOfCards' '16'}}>32</button>
+		    </div>				
+		</div>
+	</nav>
+   	{{outlet}}
