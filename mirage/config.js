@@ -147,10 +147,10 @@ export default function() {
     response = response.concat(response.slice());
 
     for (let i = response.length - 1; i > 0; i -= 1) {
-      j = Math.floor(Math.random() * (i + 1))
-      temp = response[i]
-      response[i] = response[j]
-      response[j] = temp
+      j = Math.floor(Math.random() * (i + 1));
+      temp = response[i];
+      response[i] = response[j];
+      response[j] = temp;
     }
 
     return{
