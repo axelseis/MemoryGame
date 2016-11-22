@@ -31,8 +31,7 @@ export default Ember.Component.extend({
 
 	actions:{
 		onClickCard: function(){
-			let flip = this.$(".card").data("flip-model");
-			let flipBack;
+			const flip = this.$(".card").data("flip-model");
 
 			if(flip.isFlipped){			
 				this.$(".card").on('flip:done', this.onFlipEnds.bind(this));

@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
 			view.width(maxW);
 			view.height(container.height()/rows);
 			card.height(minH);
-			card.children().css({'line-height': minH + 'px'})
+			card.children().css({'line-height': minH + 'px'});
 		});
 	},
 

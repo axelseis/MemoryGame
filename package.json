@@ -1,7 +1,7 @@
 {
-  "name": "memorygame",
+  "name": "my-abckit",
   "version": "0.0.0",
-  "description": "memory game developed in ember",
+  "description": "Small description for my-abckit goes here",
   "private": true,
   "directories": {
     "doc": "doc",
