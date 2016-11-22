@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'my-abckit',
+    modulePrefix: 'memorygame',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
