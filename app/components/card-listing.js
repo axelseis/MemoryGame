@@ -22,7 +22,7 @@ export default Ember.Component.extend({
 		this.$(".card").off('flip:done');
 
 		if(!flip.isFlipped){
-			flipBack = this.get('onClick')(this);
+			flipBack = this.get('onFlip')(this);
 		}
 		if(flipBack){
 			this.$('.card').flip(!flip.isFlipped);

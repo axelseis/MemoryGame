@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
 		let maxW = Math.floor(container.width()/cols)-10;
 		let minH = maxW*10/7;
 		let contH = container.height();
-		
+
 		while(rows*minH > contH || cards.length%rows !== 0 || minH > (contH/rows)*0.9 ){
 			cols +=1;
 			maxW = Math.floor(container.width()/cols)-10;
@@ -32,8 +32,6 @@ export default Ember.Controller.extend({
 	
 			view.width(maxW);
 			view.height(contH/rows);
-			console.log('container.height()', contH);
-			console.log('container.height()/rows', contH/rows);
 			card.height(minH);
 			card.children().css({'line-height': minH + 'px'});
 		});

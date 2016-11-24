@@ -3,6 +3,6 @@
 
 <div id="cardsGrid">
 	{{#each model as |cardUnit|}}
-		{{card-listing card=cardUnit cardId=cardUnit.id totalcards=model.length onClick=(action "onFlipCard")}}
+		{{card-listing card=cardUnit cardId=cardUnit.id totalcards=model.length onFlip=(action "onFlipCard")}}
 	{{/each}}
 </div>
