@@ -14,6 +14,9 @@ export default Ember.Route.extend({
 			
 			this.numberOfCards = num;
 			this.refresh();
+		},
+		reinitgame: function(){
+			this.refresh();
 		}
 	}
 });

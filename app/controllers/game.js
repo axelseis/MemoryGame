@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
 
 	modelChanged: function () {
 		this.firstCard = false;
+		$(window).on('resize', this.setCardsSize);
 		Ember.run.scheduleOnce('afterRender', this, this.setCardsSize);
 	}.observes('model'),
 
@@ -16,8 +17,9 @@ export default Ember.Controller.extend({
 		let rows = Math.ceil(cards.length/cols);
 		let maxW = Math.floor(container.width()/cols)-10;
 		let minH = maxW*10/7;
-
-		while(rows*minH > container.height() || cards.length%rows !== 0 || minH > (container.height()/rows)*0.9 ){
+		let contH = container.height();
+		
+		while(rows*minH > contH || cards.length%rows !== 0 || minH > (contH/rows)*0.9 ){
 			cols +=1;
 			maxW = Math.floor(container.width()/cols)-10;
 			minH = maxW*10/7;
@@ -29,7 +31,9 @@ export default Ember.Controller.extend({
 			const card = view.children('.card');
 	
 			view.width(maxW);
-			view.height(container.height()/rows);
+			view.height(contH/rows);
+			console.log('container.height()', contH);
+			console.log('container.height()/rows', contH/rows);
 			card.height(minH);
 			card.children().css({'line-height': minH + 'px'});
 		});

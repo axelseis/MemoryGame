@@ -9,9 +9,5 @@ module.exports = function(defaults) {
 
   app.import('vendor/jquery.flip.min.js');
 
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-  app.import('bower_components/bootstrap/dist/css/bootstrap-theme.css');
-  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
-
   return app.toTree();
 };
